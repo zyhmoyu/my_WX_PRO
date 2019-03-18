@@ -1,0 +1,57 @@
+{
+  "pages": [
+    
+    "pages/regist/regist",
+    "pages/mine/minedk/minedk",
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/mine/minezuj/minezuj",
+    "pages/mine/pcpm/pcpm",
+    "pages/dk/dk",
+    "pages/home/dt/result/result",
+    "pages/home/dt/tix/tix",
+    "pages/home/dt/test/test",
+    "pages/home/dt/dt",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/compont/compont"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ea1d10",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#ea1d10",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/image/icon/home.png",
+        "selectedIconPath": "/image/icon/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/home/dt/dt",
+        "iconPath": "/image/icon/xx.png",
+        "selectedIconPath": "/image/icon/xx-active.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/dk/dk",
+        "iconPath": "/image/icon/xx.png",
+        "selectedIconPath": "/image/icon/xx-active.png",
+        "text": "打卡"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "/image/icon/mine.png",
+        "selectedIconPath": "/image/icon/mine-active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

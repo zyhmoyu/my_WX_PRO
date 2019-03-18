@@ -1,0 +1,59 @@
+<!-- 试卷列表 -->
+<template name="testitem">
+	<view class="comp1 d-flex flex-col bg-white">
+		<view class="comp1_1">
+			<text>{{name}}</text>
+		</view>
+		<view class="comp1_2 colo666 fontSize12">
+			<text>已答题 {{datitimes}} 次</text>
+			<text class="comp1_2_2">获得积分 {{score}} 分</text>
+		</view>
+		<view class="comp1_3 d-flex flex-row">
+			<text wx:if="{{status==0}}" class="colo666 jxdt zjitem3_3" bindtap="hanledtc" data-stats="0" data-id="{{id}}" data-name="{{name}}" >开始答题</text>
+			<text wx:elif="{{status==1}}" class="colo666 jxdt zjitem3_3" bindtap="hanledtc" data-stats="1" data-id="{{id}}" data-name="{{name}}" data-tnumber="{{tnumber}}">{{tnumber+1}}/{{count}}题</text>
+			<text wx:else ="{{status==2}}" class="bgred jxdt colofff" bindtap="hanledtc" data-stats="0" data-id="{{id}}" data-name="{{name}}"data-tnumber="{{tnumber}}" >已答完</text>
+		</view>
+	</view>
+</template>
+
+<template name="zjitem">
+	<view class="comp1 d-flex flex-col bg-white">
+		<view class="comp1_1">
+			<text>{{name?name:'“中青年干部加强理论修养主动担当作为”'}}</text>
+		</view>
+		<view class="zjitem2 comp1_2 colo666 fontSize12">
+			<text>限时{{time?time:60}}分钟</text>
+			<text class="comp1_2_2">共{{count?count:10}}题</text>
+		</view>
+		<view class="zjitem3 d-flex flex-row">
+			<view class="zjitem3_1 d-flex flex-row">
+				<text>时间段(前端后台决定格式)</text>
+			</view>
+			<view>
+				<view class="comp1_3 d-flex flex-row">
+					<text wx:if="{{status==0}}" class="colo666 jxdt zjitem3_3" bindtap="hanledtc" data-stats="0" data-id="{{id}}" data-name="{{name}}" >开始答题</text>
+					<text wx:elif="{{status==1}}" class="colo666 jxdt zjitem3_3" bindtap="hanledtc" data-stats="1" data-id="{{id}}" data-name="{{name}}" data-tnumber="{{tnumber}}">{{tnumber+1}}/{{count}}题</text>
+					<text wx:else ="{{status==2}}" class="bgred jxdt colofff" bindtap="hanledtc" data-stats="0" data-id="{{id}}" data-name="{{name}}"data-tnumber="{{tnumber}}" >已答完</text>
+					
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+<template name="zuji1">
+	<view>
+		<view class="comp2">
+			<view class="comp2_1">
+				<text>今天</text>
+				<text>19:35</text>
+			</view>
+			<view class="comp2_2">
+				<text>《习近平新时代中国特色社会主义思想三十讲》专题答题</text>
+			</view>
+		</view>
+		<view class="comp3">
+			<template is="zjitem"></template>
+			<template is="zjitem"></template>
+		</view>
+	</view>
+</template>

@@ -1,0 +1,41 @@
+<!--pages/home/dt/test/test.wxml-->
+<import src="../../../compont/compont"></import>
+<view class="dt1 bg-white d-flex flex-row">
+	<view class="d-flex flex-row align-items-center">
+		<image src="/image/icon/dt4.png"></image>
+	</view>
+	<view>
+		<text class="fontSize14 font-bold">《习近平新时代中国特色社会主义思想三十讲》专题答题</text>
+	</view>
+</view>
+<view class="test2 bg-white">
+	<view class="test2_1 d-flex flex-row">
+		<view>
+				<text class="title1">答题次数</text>
+				<text class="title2">{{dtcs}}</text>
+			
+		</view>
+		<view>
+				<text class="title1">获得积分</text>
+				<text class="title2">{{score}}</text>
+			
+		</view>
+		<view class="test2_1_3">
+				<text class="title1">今日最佳成绩</text>
+				<view class="bb1">
+					<view class="bb1_1">
+						<image class="bb1_1_1" src="/image/icon/start.png"></image>
+						<image class="bb1_1_2" style="transform: translateX(-{{bastscore}}%);" src="/image/icon/startbg.png"></image>
+					</view>
+					
+				</view>
+			
+		</view>
+	</view>
+</view>
+<view class="test3">
+	<block wx:for="{{chapterlist}}" wx:key="index">
+		<template is="zjitem" data="{{...item}}"></template>
+	</block>
+	<!-- <template is="zjitem"></template> -->
+</view>

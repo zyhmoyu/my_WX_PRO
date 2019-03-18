@@ -1,0 +1,59 @@
+<!--pages/mine/pcpm/pcpm.wxml-->
+<view class="pcpm1 d-flex flex-row font-bold justify-content-space-around bg-white">
+	<view>
+		<text class="{{week1?'active':''}}" bindtap="handleweek1">当天排名</text>
+	</view>
+	
+	<view>
+		<text class="{{week3?'active':''}}" bindtap="handleweek3">总排名</text>
+	</view>
+</view>
+<view class="pcpm2" wx:if="{{ispc}}">
+	<view class="pcpm2_1">
+		<text class="fontSize12">我的排行</text>
+	</view>
+	<view class="pcpm2_2 d-flex flex-row justify-content-space-between align-items-center">
+		<view class="pcpm2_2_1 d-flex flex-row">
+			<view class="pcpm2_2_1_1 d-flex flex-row align-items-center">
+				<image wx:if="{{showpc.sort<4}}" src="/image/icon/xz{{showpc.sort}}.png"></image>
+				<text wx:else class="pcpm2_2_1_1_1">{{showpc.sort}}</text>
+			</view>
+			<view class="pcpm2_2_1_2 d-flex flex-row align-items-center">
+				<view class="avatar">
+					<image src="{{showpc.avatar}}"></image>
+				</view>
+				<view  class="pcpm2_2_1_2_2 d-flex flex-col">
+					<text class="pcpm2_2_1_2_2_1 fontSize14">{{showpc.name}}</text>
+					<!-- <text class="pcpm2_2_1_2_2_2 fontSize12">上周排名 第11名</text> -->
+				</view>
+			</view>
+		</view>
+		<view class="pcpm2_2_2">{{showpc.score}}</view>
+	</view>
+</view>
+
+<view class="pcpm2">
+	<view class="pcpm2_1">
+		<text class="fontSize12" decode>排名&nbsp;&nbsp;&nbsp;&nbsp;(2019年&nbsp;3月&nbsp;4日~3月10日)</text>
+	</view>
+	<block wx:for="{{showlist}}" wx:key="index">
+		<view class="pcpm2_2 d-flex flex-row justify-content-space-between align-items-center">
+		<view class="pcpm2_2_1 d-flex flex-row">
+			<view class="pcpm2_2_1_1 d-flex flex-row align-items-center">
+				<image wx:if="{{index+1<4}}" src="/image/icon/xz{{index+1}}.png"></image>
+				<text wx:else class="pcpm2_2_1_1_1">{{index+1}}</text>
+			</view>
+			<view class="pcpm2_2_1_2 d-flex flex-row align-items-center">
+				<view class="avatar">
+					<image src="{{item.avatar}}"></image>
+				</view>
+				<view  class="pcpm2_2_1_2_2 d-flex flex-col">
+					<text class="pcpm2_2_1_2_2_1 fontSize14">{{item.name}}</text>
+					<text class="pcpm2_2_1_2_2_2 fontSize12">{{item.departmentName}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="pcpm2_2_2">{{item.score}}</view>
+	</view>
+	</block>
+</view>

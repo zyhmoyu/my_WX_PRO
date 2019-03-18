@@ -1,0 +1,129 @@
+/* pages/mine/minedk/minedk.wxss */
+.dk1{
+    padding: 50rpx 40rpx;
+}
+.dk1 image{
+    width: 77.5rpx;
+    height: 82.5rpx;
+}
+.dk1>view{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.dktext1{
+    font-size: 13px;
+    color: #b9b9b9;
+    margin: 10rpx 0;
+}
+.dktext2{
+    font-size: 16px;
+    color: #222222;
+}
+.dk2{
+    margin: 10rpx 20rpx;
+    border-radius: 10rpx;
+}
+.dk2_title,
+.dk2_foot{
+    padding: 20rpx;
+}
+.dk2_title image{
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 10rpx;
+}
+.dk2_title{
+    font-size: 15px;
+    color: #222222;
+    border-bottom: 1rpx solid #eeeeee;
+}
+.dk2_title2{
+    font-size: 13px;
+    color: #b9b9b9;
+    margin-left: 15rpx;
+}
+.leftimg{
+    width: 15rpx;
+    height: 25rpx;
+    vertical-align: middle;
+}
+.dk2_cont1{
+    font-size: 14px;
+    color: #222222;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.centext{
+    margin: 0 20rpx;
+}
+.dk2_cont{
+    padding-bottom:20rpx;
+}
+.dk2_cont2{
+    font-size: 14px;
+    flex-wrap: wrap;
+    color: #222222;
+    
+}
+.flex-7{
+    width: 14.2%;
+    flex: 14.2%;
+    text-align: center;
+    padding-top: 20rpx;
+    position: relative;
+}
+.flex-7.active text{
+    display: inline-block;
+    width: 57rpx;
+    height: 57rpx;
+    background: #f4f7f8;
+    border-radius: 50%;
+    line-height: 57rpx;
+}
+.flex-7.now text{
+    background: #ea1d10;
+    color: #ffffff;
+}
+.flex-7.bdk::after,
+.flex-7.cdk::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 15rpx;
+    height: 15rpx;
+    top: 20rpx;
+    right: 20rpx;
+    border-radius: 50%;
+    
+}
+.dk2_foot .cdk::before,
+.flex-7.cdk::after{
+    background: #11e084;
+}
+.dk2_foot .bdk::before,
+.flex-7.bdk::after{
+    background: #fabf00;
+}
+
+.dk2_foot{
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20rpx 20rpx 60rpx;
+    border-radius: 0 0 10rpx 10rpx;
+    border-top: 1rpx solid #eeeeee;
+    color: #999999;
+    font-size: 14px;
+}
+.dk2_foot text::before{
+    content: "";
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.dk2_foot .cdk{
+    margin-left: 15rpx;
+}

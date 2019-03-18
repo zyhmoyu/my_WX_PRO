@@ -1,0 +1,14 @@
+<!--pages/dk/dk.wxml-->
+<view class="dt1 bg-white">
+	<image src="/image/icon/dt4.png"></image>
+	<text class="fontSize14 font-bold">我的签到</text>
+</view>
+<view class="dkg dk1" wx:if="{{!isSign}}" bindtap="daka">
+	<text>签到打卡</text>
+</view>
+<view class="dkg dk2" wx:else>
+	<text>今日打卡已完成</text>
+</view>
+<view class="tc">
+	
+</view>

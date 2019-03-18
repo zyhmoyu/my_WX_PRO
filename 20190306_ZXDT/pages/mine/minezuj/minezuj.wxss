@@ -1,0 +1,11 @@
+/* pages/mine/minezuj/minezuj.wxss */
+@import "../../compont/compont";
+.fontSize14{
+	font-size: 16px;
+}
+.mz2all{
+	padding: 30rpx;
+}
+.mz2all>view+view{
+	margin-top: 30rpx;
+}

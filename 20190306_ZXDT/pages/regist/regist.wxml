@@ -1,0 +1,32 @@
+<!--pages/regist/regist.wxml-->
+<view class="login1">
+	<image src="{{domain+'/static/img/wbg.png'}}" class="loginbg"></image>
+	<!-- /image/img/bg.png -->
+  <view class="login1_2" wx:if="{{ishow}}">
+		<view>
+			<text>姓名:</text>
+			<input type="text" placeholder="您的姓名" value="{{name}}" bindinput="InputName" />
+		</view>
+		<view>
+			<text>手机:</text>
+			<input type="number" placeholder="您的手机号" maxlength="11" value="{{phone}}" bindinput="InputPhone" />
+		</view>
+		<view>
+			<text>单位:</text>
+			<view class="login1_2_3">
+				<picker bindchange="bindPickerChange"  value="{{index}}" range="{{array}}" range-key="fullname">
+					<view class="weui-input">{{array[index].fullname}}</view>
+				</picker>
+			</view>
+			<!-- <input type="text" confirm-type="done" placeholder="您所在单位" value="{{departmentId}}" bindinput="InputDepartmentId" /> -->
+		</view>
+	</view>
+	<!-- <view wx:if="{{ishow}}" class="regist" >
+		<text>注册</text>
+	</view> -->
+ <button wx:if="{{ishow}}" class="regist" bindtap="regist" open-type="getUserInfo" lang="zh_CN" >
+  注册
+</button>
+</view>
+<!-- <button open-type="openSetting">打开授权设置页</button> -->
+ <!-- <button open-type="getUserInfo >获取授权信息</button> -->

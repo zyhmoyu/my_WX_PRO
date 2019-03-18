@@ -1,0 +1,92 @@
+/* pages/home/dt/test/test.wxss */
+@import '../../../compont/compont';
+.dt1{
+	padding: 40rpx 30rpx 35rpx;
+	white-space: nowrap;
+	align-items: center;
+}
+.dt1 image{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 15rpx;
+	vertical-align: middle;
+}
+.dt1 text{
+	display: inline-block;
+	width: 644rpx;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 1.5;
+}
+.dt1>view{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.test2{
+	padding: 0rpx 40rpx 15rpx;
+	
+}
+.test2_1{
+	background: #ef5249;
+	color: #FFFFFF;
+	padding: 20rpx 25rpx;
+	border-radius: 10rpx;
+}
+
+.test2_1>view{
+	display: flex;
+	flex-direction: column;
+	padding: 0 40rpx;
+	/* border-right: 1rpx solid #FFFFFF; */
+}
+.test2_1>view+view{
+	border-left: 1rpx solid #f88c83;
+	/* e15145 */
+}
+.test2_1_3{
+	align-items: center;
+}
+.title1{
+	font-size: 11px;
+	font-weight: lighter;
+	margin-bottom: 15rpx;
+}
+.title2{
+	font-size: 17px;
+	text-align: center;
+}
+.bb1{
+	width: 185rpx;
+}
+
+.bb1_1,
+.bb1 image{
+	width: 185rpx;
+	height: 28.5rpx;
+}
+.bb1_1{
+	position: relative;
+	overflow: hidden;
+	background: #c73328;
+}
+.bb1_1_1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	
+}
+.bb1_1_2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.test3{
+	padding: 15rpx 25rpx;
+}
+.test3>view+view{
+	margin-top: 15rpx;
+}

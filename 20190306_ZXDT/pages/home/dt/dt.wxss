@@ -1,0 +1,17 @@
+/* pages/home/dt/dt.wxss */
+@import "../../compont/compont";
+.dt1{
+	padding: 40rpx 30rpx;
+}
+.dt1 image{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 15rpx;
+	vertical-align: middle;
+}
+.dt2{
+	padding: 15rpx 30rpx;
+}
+.dt2>view+view{
+	margin-top: 15rpx;
+}

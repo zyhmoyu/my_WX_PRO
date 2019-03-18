@@ -1,0 +1,116 @@
+<!--pages/home/dt/tix/tix.wxml-->
+<view class="bg-white tix1 d-flex justify-content-space-between">
+	<view class="tix1_1 d-flex flex-col">
+		<text class="font-bold colo333">{{name?name:'“中青年干部加强理论修养主动担当作为”'}}</text>
+		<view class="tix1_1_1">
+			<image src="/image/icon/timer.png"></image>
+			<text class="fontSize13">{{t}}</text>
+		</view>
+	</view>
+	<view class="tix1_2 d-flex flex-row">
+		<text class="tix1_2_1">{{n+1}}</text>
+		<text class="fontSize10 tix1_2_2">/{{tilist.length}}</text>
+	</view>
+</view>
+<wxs module="m1">
+	var hrr = function(str,index){
+		if(!str&&str!=0){
+			str=""
+		}
+		str = str.toString()
+		var c = -1
+		for(var i=0;i<str.length;i++){
+			if(str[i]==index){
+				c = i
+				return c
+			}
+		}
+		return c
+	}
+	var transc = function(str){
+		str = str.toString()
+		let c = ''
+		for(var i=0;i<str.length;i++){
+			if(str[i]=='0'){
+				c += 'A'
+			}else if(str[i]=='1'){
+				c += 'B'
+			}
+		}
+		console.log(c)
+		return c
+	}
+	module.exports = {
+		message:hrr,
+		transc:transc
+	};
+</wxs>
+<!-- <view>{{m1.message('',0)}}</view> -->
+<view class="tix2">
+	<view class="tix2_1 bg-white">
+		<view class="tix2_1_1">
+			<text class="font-bold">题目类型</text>
+			<text>{{tilist[n].type}}</text>
+
+		</view>
+		<view  wx:if="{{tilist[n].contentType==1||tilist[n].contentType==2}}">
+			<view class="tix2_1_2">
+				<text class="fontSize14 ">{{tilist[n].title}}</text>
+			</view>
+			<block wx:for="{{tilist[n].option}}" wx:key="index">
+				<!-- <view>{{m1.message(userAnswer[n].answer,index)}}</view> -->
+				<button bindtap="handlexz" data-result="{{index}}" class="xuanx {{m1.message(userAnswer[n].answer,index)!=-1?'active':''}} fontSize13">
+					<text  wx:if="{{index==0}}">A</text>
+					<text wx:elif="{{index==1}}" >B</text>
+					<text wx:elif="{{index==2}}" >C</text>
+					<text wx:elif="{{index==3}}" >D</text>
+					<text>{{item}}</text>
+				</button>
+			</block>
+		</view>
+		<view wx:else>
+			<view class="fontSize14">
+				<text>行政机关对当事人加处罚款或者滞纳金的数额不得超出金钱给付义务的数额。</text>
+			</view>
+			<view class="tix2_1_8_9 d-flex fontSize13">
+				<text bindtap="handlexz" data-result="0" class="tix2_1_8 {{userAnswer[n].answer=='0'?'active':''}}">✔</text>
+			</view>
+			<view class=" d-flex fontSize13">
+				<text bindtap="handlexz" data-result="1" class="tix2_1_8 {{userAnswer[n].answer=='1'?'active':''}}">✘</text>
+				
+			</view>
+		</view>
+		<view wx:if="{{status==2}}" class="tix2_1_7 fontSize14">
+			<text>正确答案：{{tilist[n].textAnswer}}</text>
+		</view>
+		<view class="tix2_1_7_1 fontSize14" wx:if="{{status==2}}">
+			<text>答案解析：</text>
+			<text >《行政处罚法》第四十五条规定，当事人对行政处罚决定不服申请行政复议或者提起行政诉讼的，行政处罚不停止执行，法律另有规定除外。</text>
+					
+		</view>
+		<!-- <view class="tix2_1_7_1">
+			
+		</view> -->
+	</view>
+</view>
+<view class="tix3 bg-white">
+	<button class="tix3_1" bindtap="handleprev" data-mode='prev'>
+		<text decode>&lt;&nbsp;上一题</text>
+	</button>
+	<button class="tix3_2" bindtap="handleprev" data-mode='next'>
+		<text decode>下一题&nbsp;&gt;</text>
+	</button>
+</view>
+<!-- 答题卡 -->
+<view class="tix4 bg-white" bindtap="ishowdtk">
+	<text>答题卡</text>
+</view>
+<!-- 答题卡2 -->
+<view class="tix5" wx:if="{{ishowdtk}}">
+	<view class="tix5_2" bindtap="ishowdtk">
+	</view>
+	<scroll-view class="tix5_1" scroll-y="{{true}}">
+		<text bindtap="handleti" data-index="{{index}}" wx:for="{{tilist}}" class="{{userAnswer[index].active}}" wx:key="index">{{index+1}}</text>
+		<!-- <text class="active">6</text> -->
+	</scroll-view>
+</view>

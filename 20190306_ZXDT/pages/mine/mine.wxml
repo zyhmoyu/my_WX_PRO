@@ -1,0 +1,87 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine1 d-flex flex-row justify-content-space-between">
+	<view class="d-flex flex-row">
+		<view class="mine1_1">
+			<image src="{{userInfo.avatar}}"></image>
+		</view>
+		<view class="mine1_2">
+			<view class="mine1_2_1">
+				<text>{{userInfo.name}}</text>
+			</view>
+			<view class="mine1_2_2 d-flex flex-row justify-content-space-between">
+				<view>
+					<text class="mine1_2_2_title">答题次数</text>
+					<text class="mine1_2_2_subtitle">{{mytotalday.datitimes}}</text>
+				</view>
+				<view>
+					<text class="mine1_2_2_title">获得积分</text>
+					<text class="mine1_2_2_subtitle">{{mytotalday.score}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="mine1_3 d-flex flex-row">
+		<view>
+			<text class="mine1_2_2_title">今日排名</text>
+			<view class="mine1_2_2_subtitle">
+				<text class="mine1_no">No.</text>
+				<text class="mine1_num">{{myday.sort}}</text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="dt1 bg-white" bindtap='jumplast'>
+	<view class="rightArrow mine6_text" >
+		<view class="d-flex flex-row">
+			<image src="/image/icon/dt4.png"></image>
+			<text class="fontSize14 font-bold">上次答到</text>
+			<text class="mine4_text">{{chapterlist.name}}</text>
+		</view>
+	</view>
+</view>
+<!-- <view class="dt1 bg-white" bindtap="handlejumpzj">
+	<view class="rightArrow mine6_text">
+		<view class="d-flex flex-row">
+			<image src="/image/icon/dt4.png"></image>
+			<text class="fontSize14 font-bold">我的足迹</text>
+			<text class="mine4_text">“”</text>
+		</view>
+	</view>
+</view> -->
+<view class="dt1 bg-white" bindtap='handlepm'>
+	<view class="rightArrow mine6_text">
+		<view class="d-flex flex-row">
+			<image src="/image/icon/dt4.png"></image>
+			<text class="fontSize14 font-bold">个人排名</text>
+			<!-- <text class="mine4_text">“中青年干部加强理论修养主动担当作为”</text> -->
+		</view>
+	</view>
+</view>
+<view class="dt1 bg-white" bindtap='handlepm2'>
+	<view class="rightArrow mine6_text">
+		<view class="d-flex flex-row">
+			<image src="/image/icon/dt4.png"></image>
+			<text class="fontSize14 font-bold">在单位排名</text>
+			<!-- <text class="mine4_text">“中青年干部加强理论修养主动担当作为”</text> -->
+		</view>
+	</view>
+</view>
+<view class="dt1 bg-white" bindtap='handlepm1'>
+	<view class="rightArrow mine6_text">
+		<view class="d-flex flex-row">
+			<image src="/image/icon/dt4.png"></image>
+			<text class="fontSize14 font-bold">单位排名</text>
+			<!-- <text class="mine4_text">“中青年干部加强理论修养主动担当作为”</text> -->
+		</view>
+	</view>
+</view>
+
+<view class="dt1 bg-white" bindtap="jumpdak">
+	<view class="rightArrow mine6_text">
+		<view class="d-flex flex-row">
+			<image src="/image/icon/dt4.png"></image>
+			<text class="fontSize14 font-bold">我的签到</text>
+			<text class="mine4_text">“中青年干部加强理论修养主动担当作为”</text>
+		</view>
+	</view>
+</view>

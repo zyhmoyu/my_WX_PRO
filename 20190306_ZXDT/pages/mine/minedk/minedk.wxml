@@ -1,0 +1,53 @@
+<!--pages/mine/minedk/minedk.wxml-->
+<view class="dk1 d-flex justify-content-space-around flex-row bg-white">
+    <view >
+        <image src="/image/icon/dk.png" />
+        <text class="dktext1">已打卡</text>
+        <text class="dktext2">5</text>
+    </view>
+    <view >
+        <image src="/image/icon/dk2.png" />
+        <text class="dktext1">总天数</text>
+        <text class="dktext2">90</text>
+    </view>
+</view>
+<view class="dk2 bg-white">
+	<view class="dk2_title">
+        <image src="/image/icon/timer1.png" />
+        <text >共90天</text>
+        <text class="dk2_title2">(年月日~年月日)</text>
+	</view>
+	<view class="dk2_cont">
+        <view class="dk2_cont1 d-flex flex-row">
+            <image class="leftimg" src="/image/icon/left1.png" bindtap="prev" />
+            <picker class="centext" mode="date" value="{{date}}" fields='month' bindchange="bindDateChange">
+              <view class="weui-input">{{date}}</view>
+            </picker>
+            <!-- <text class="centext">{{year}} 年 {{mouth<10?'0'+mouth:mouth}} 月</text> -->
+            <image class="leftimg" src="/image/icon/left2.png" bindtap="next" />
+        </view>
+        <view class="dk2_cont2 justify-content-space-around d-flex flex-row">
+            <text >日</text>
+            <text >一</text>
+            <text >二</text>
+            <text >三</text>
+            <text >四</text>
+            <text >五</text>
+            <text >六</text>
+        </view>
+        
+        <view class="dk2_cont2 justify-content-space-around d-flex flex-row">
+            <block wx:for="{{dates}}" wx:key="index">
+                <view class="flex-7 {{item.isdk}} {{item.day!=0?'active':' '}} {{item.now=='now'?'now':''}}">
+                    <text >{{item.day!=0?item.day:' '}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+	<view class="dk2_foot d-flex flex-row">
+        <view >
+            <text class="bdk">未打卡</text>
+            <text class="cdk">已打卡</text>
+        </view>
+    </view>
+</view>

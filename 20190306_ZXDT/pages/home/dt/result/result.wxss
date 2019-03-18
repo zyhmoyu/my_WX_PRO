@@ -1,0 +1,81 @@
+/* pages/home/dt/result/result.wxss */
+page{
+	background: #FFFFFF;
+}
+.resall{
+	padding: 40rpx;
+}
+.res1{
+	margin-top: 90rpx;
+	font-size: 17px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bolder;
+	text-align: center;
+	line-height: 1.5;
+}
+.res1 text{
+	width: 100%;
+}
+.canvas{
+	width: 345rpx;
+	height: 250rpx;
+	margin: 20rpx auto;
+}
+.res2{
+	position: relative;
+}
+.res2>text{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 45px;
+	transform: translateX(-50%) translateY(-50%);
+	color: #EA1D10;
+	font-weight: bold;
+}
+.res3{
+	text-align: center;
+	font-size: 11px;
+	color: #aaaaaa;
+	line-height: 1.5;
+}
+.res5{
+	margin-top: 100rpx;
+}
+.res5>view{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.res5>view>text:first-child{
+	font-size: 26px;
+	font-family: SimSun;
+	font-weight: bold;
+}
+.res5>view>text:last-child{
+	font-size: 11px;
+}
+.res6_2{
+	width: 496rpx;
+	height: 64.5rpx;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 10rpx;
+	text-align: center;
+	line-height: 64.5rpx;
+	margin: auto;
+}
+.res6_2::after{
+	border: none;
+}
+.res6{
+	color: #FFFFFF;
+	background: #EA1D10;
+	margin-top: 100rpx;
+}
+.res7{
+	color: #EA1D10;
+	background:#FFFFFF;
+	border: 1rpx solid #EA1D10;
+	margin-top: 20rpx;
+}

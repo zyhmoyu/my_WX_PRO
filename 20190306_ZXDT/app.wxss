@@ -1,0 +1,74 @@
+/**app.wxss**/
+page{
+	background: #f8f4f1;
+	font-family: 'Microsoft JhengHei';
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.d-flex{
+	display: flex;
+}
+.justify-content-space-around{
+	justify-content: space-around;
+}
+.justify-content-space-between{
+	justify-content: space-between;
+}
+.flex-row{
+	flex-direction: row;
+}
+.flex-col{
+	flex-direction: column;
+}
+.fontSize14{
+	font-size: 16px;
+}
+.fontSize12{
+	font-size: 12px;
+}
+.fontSize13{
+	font-size: 13px;
+}
+.fontSize10{
+	font-size: 10px;
+}
+.bg-white{
+	background: #ffffff;
+}
+.align-items-center{
+	align-items: center;
+}
+.colo555{
+	color: #555555;
+}
+.colo222{
+	color: #222222;
+}
+.colo333{
+	color: #333333;
+}
+.colo666{
+	color: #666666;
+}
+.colofff{
+	color: #FFFFFF;
+}
+.font-bold{
+	font-weight: bold;
+}
+.dt1{
+	padding: 30rpx 30rpx;
+}
+.dt1 image{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 15rpx;
+	vertical-align: middle;
+}

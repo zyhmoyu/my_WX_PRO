@@ -1,0 +1,75 @@
+/* pages/compont/compont.wxss */
+.comp1{
+	padding: 25rpx 15rpx;
+	border-radius: 10rpx;
+}
+.comp1>view+view{
+	margin-top: 20rpx;
+}
+.comp1_1 text{
+  display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	width: 682rpx !important;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+}
+.comp1_2_2{
+	margin-left: 50rpx;
+}
+.comp1_3{
+	justify-content: flex-end;
+}
+.comp1_3 text+text{
+	margin-left: 15rpx;
+}
+/* 继续答题 */
+.jxdt{
+	padding: 4rpx 15rpx;
+	font-size: 13px;
+	border-radius: 8rpx;
+}
+.bgea{
+	background: #eaeaea;
+}
+.colo999{
+	color: #999999;
+}
+
+.zjitem3{
+	margin-top: 5rpx;
+	font-size: 12px;
+	justify-content: space-between;
+}
+.zjitem3_1{
+	
+}
+.zjitem3_3{
+	border: 1rpx solid #AAAAAA;
+}
+
+.bgred{
+	background: #ea1d10;
+}
+.comp2{
+	
+}
+.comp2_1{
+	font-size: 11px;
+}
+.comp2_1 text+text{
+	margin-left: 20rpx;
+}
+.comp2_2 text{
+	margin-top: 10rpx;
+	display: inline-block;
+	font-size: 16px;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.comp3>view{
+	margin-top:20rpx;
+}

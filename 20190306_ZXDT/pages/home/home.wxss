@@ -1,0 +1,73 @@
+/* pages/home/home.wxss */
+.navimg {
+	font-size: 0;
+}
+.navimg image{
+	height: 287.5rpx;
+	width: 100%;
+	margin: 10rpx 0;
+}
+.navimg2{
+	padding: 25rpx;
+	margin-bottom: 15rpx;
+}
+button{
+	background: #FFFFFF;
+	border-radius: 0;
+}
+button:after{
+	border: none;
+}
+.navimg2 image{
+	width: 62rpx;
+	height: 62rpx;
+	margin: 20rpx 0;
+}
+.navimg2>view{
+	display: flex;
+	background: #FFFFFF;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.navimg2>button:after{
+	border: none;
+}
+.home3{
+	padding: 25rpx;
+	padding-bottom: 0;
+}
+.home3 .home3_1{
+	font-size: 16px;
+	font-weight: bold;
+	align-items: center;
+}
+.home3 .home3_1 image{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 15rpx;
+	vertical-align: middle;
+}
+.home3_2{
+	padding: 25rpx 0;
+	border-bottom: 1rpx solid #eaeaea;
+}
+.home3_2_1{
+	height: 147.5rpx;
+}
+.home3_2_1_1{
+	font-weight: bold;
+}
+.home3_2_1_2{
+	/* margin-bottom: 20rpx; */
+}
+.home3_2_2{
+	font-size: 0;
+}
+.home3_2_2 image{
+	width: 240rpx;
+	height: 147.5rpx;
+	border-radius: 10rpx;
+	overflow: hidden;
+	/* border: 1rpx solid #000; */
+}

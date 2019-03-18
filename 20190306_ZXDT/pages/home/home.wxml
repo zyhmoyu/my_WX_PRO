@@ -1,0 +1,53 @@
+<!--pages/home/home.wxml-->
+<view class="navimg">
+	<image src="{{domain+banner}}"></image>
+</view>
+<view class="navimg2 colo555 bg-white d-flex flex-row fontSize12 justify-content-space-around">
+	<view bindtap='handledt'>
+		<image src="/image/icon/dt.png"></image>
+		<text>我要答题</text>
+	</view>
+	<view>
+		<image src="/image/icon/dt1.png"></image>
+		<text>我的积分</text>
+	</view>
+	<view bindtap="handlepm">
+		<image src="/image/icon/dt2.png"></image>
+		<text>单位排名</text>
+	</view>
+	<view bindtap="jumplast">
+		<image src="/image/icon/dt3.png"></image>
+		<text>上次答到</text>
+	</view>
+</view>
+<view class="home3 bg-white">
+	<view class="home3_1 d-flex flex-row ">
+		<image src="/image/icon/dt4.png"></image>
+		<text class="colo222">牢记使命 不忘初心</text>
+	</view>
+	<view>
+		<block wx:for="{{bookslist}}" wx:key="{{index}}">
+			<button class="home3_2 d-flex flex-row justify-content-space-between" bindtap="handsj" data-name="{{item.name}}" data-id="{{item.id}}">
+				<view class="home3_2_1 d-flex flex-col justify-content-space-between">
+					<text class="fontSize13 colo333 home3_2_1_1">{{item.name}}</text>
+					<!-- <text class="fontSize10 home3_2_1_2 colo666">233人正在答题</text> -->
+				</view>
+				<view class="home3_2_2">
+					<image src="{{item.imageurl}}"></image>
+				</view>
+			</button>
+		</block>
+		<!-- 
+		<view class="home3_2 d-flex flex-row">
+			<view class="home3_2_1 d-flex flex-col justify-content-space-between">
+				<text class="fontSize13 colo333 home3_2_1_1">《习近平新时代中国特色社会主义思想三十讲》专题答题</text>
+				<text class="fontSize10 home3_2_1_2 colo666">233人正在答题</text>
+			</view>
+			<view class="home3_2_2">
+				<image src="/image/img/img1.png"></image>
+			</view>
+		</view> -->
+	</view>
+	
+</view>
+<!--wxml-->

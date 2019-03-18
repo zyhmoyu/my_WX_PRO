@@ -1,0 +1,88 @@
+/* pages/mine/mine.wxss */
+.mine1{
+	background: #EA1D10;
+	padding: 40rpx;
+	color: #FFFFFF;
+}
+.mine1_1,
+.mine1_1 image{
+	width: 132.5rpx;
+	height: 132.5rpx;
+}
+.mine1_1{
+	border-radius: 50%;
+	overflow: hidden;
+	border: 4rpx solid #FFFFFF;
+}
+.mine1_2{
+	margin-left: 20rpx;
+	width: 308rpx;
+}
+.mine1_2_1>text{
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	width: 308rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mine1_2_2{
+	margin-top: 20rpx;
+}
+.mine1_2_2>view{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.mine1_2_2_title{
+	font-size: 12px;
+	font-weight: lighter;
+	
+}
+.mine1_2_2_subtitle{
+	font-size: 20px;
+	font-family: SimSun;
+	text-align: center;
+}
+.mine1_3{
+	justify-content: center;
+	align-items: flex-end;
+}
+.mine1_no{
+	font-size: 14px;
+	font-weight: lighter;
+}
+.mine1_num{
+}
+.dt1{
+	padding: 30rpx 30rpx;
+	margin: 10rpx 0;
+}
+.rightArrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rightArrow::after{
+    content: "";
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    border-top: 1rpx solid #ccc;
+    border-right: 1rpx solid #ccc;
+    transform: rotate(45deg)
+}
+.mine4_text{
+	margin-left: 12rpx;
+	width: 466rpx;
+	font-size: 14px;
+	color: #c1c1c1;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.fontSize14{
+	font-size: 16px;
+}

@@ -1,0 +1,35 @@
+<!--pages/home/dt/result/result.wxml-->
+<view class="resall">
+	<view class="res1">
+		<text>“中青年干部加强理论修养主动担当作为”习题（三）</text>
+	</view>
+	<view class="res2">
+		<text>{{score}}</text>
+		<canvas canvas-id="score" class="canvas"></canvas>
+	</view>
+	<view class="res3">
+		<text>及格分数线--</text>
+	</view>
+	<view class="res3">
+		<text>重复考试可（不可）奖励积分</text>
+	</view>
+	<view class="res5 d-flex justify-content-space-around">
+		<view>
+			<text>{{t}}</text>
+			<text>考试用时</text>
+		</view>
+		<view>
+			<text>750</text>
+			<text>奖励积分</text>
+		</view>
+	</view>
+	<button class="res6 res6_2" bindtap="handlehk" >
+		<!-- <button > -->
+		回看
+		<!-- </button> -->
+		
+	</button>
+	<!-- <view class="res7 res6_2">
+		<text>重新答题</text>
+	</view> -->
+</view>

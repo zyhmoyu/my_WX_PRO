@@ -1,0 +1,12 @@
+<!--pages/home/dt/dt.wxml-->
+<import src="../../compont/compont"></import>
+<view class="dt1 bg-white">
+	<image src="/image/icon/dt4.png"></image>
+	<text class="fontSize14 font-bold">我的答题</text>
+</view>
+<view class="dt2">
+	<block wx:for="{{chapterlist}}" wx:key="index">
+		<template is="testitem" data="{{...item}}"></template>
+	</block>
+	
+</view>
